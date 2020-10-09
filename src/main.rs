@@ -29,10 +29,10 @@ fn get_client() -> Result<reqwest::blocking::Client> {
 }
 
 fn get_os_name<'a>() -> &'a str {
-    // In rust-analyzer releases, mac assets are suffixed with "-macos" but
-    // the Rust's `env::consts::OS` would be "mac" instead.
-    if env::consts::OS == "mac" {
-        "macos"
+    // In rust-analyzer releases, mac assets are suffixed with "-mac" but
+    // the Rust's `env::consts::OS` would be "macos" instead.
+    if env::consts::OS == "macos" {
+        "mac"
     } else {
         env::consts::OS
     }
